@@ -53,3 +53,4 @@ ls()
 
 # remove a var from globalenv
 rm(x)
+
