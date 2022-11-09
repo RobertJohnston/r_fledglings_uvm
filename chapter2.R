@@ -51,3 +51,5 @@ get('result', envir=globalenv())
 # list all variables in globalenv()
 ls()
 
+# remove a var from globalenv
+rm(x)
