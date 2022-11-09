@@ -24,3 +24,10 @@ match(x, table, nomatch = NA_integer_, incomparables = NULL)
 sum()
 # min
 min()
+
+# Plot
+x <- sort(rnorm(47))
+plot(x, type="s", main="plot(x, type=\"s\")")
+
+
+
