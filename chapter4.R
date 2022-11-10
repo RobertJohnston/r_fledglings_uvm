@@ -59,4 +59,30 @@ help(sample)
 # look at the arguments for the sample function
 args(sample)
 
+# This function has four arguments: x is a vector you’d like to sample from, size is the number of samples to take, replace indicates whether you’d like to sample with replacement (which means the same numbers can be drawn repeatedly), and prob is used when you want to weight your samples so that some have a higher chance of being selected than others.
+
+# create a new object called fiveIntegers, using the sample function
+fiveIntegers  <- sample(x = c(1:100), size = 5, replace = TRUE)
+
+# look at the object called fiveIntegers
+fiveIntegers
+
+#Dates
+today <- date()
+str(today)
+
+birthday  <- 7/18/1918
+str(birthday)
+
+# if you want to enter a date into R you have to be careful, or R will think you are using a calculator! Here, R returned 7 divided by 18 divided by 1918. You can force the birthday object to be a date by using the as.Date function:
+
+# use the as.Date function to convert Nelson Mandela's birthday to a date
+birthday2 <- as.Date("7/18/1918")
+# this crashes as format is ambiguous.
+
+# this would work because we tell R how the original date was formatted
+birthday2 <- as.Date("7/18/1918", format = "%m/%d/%Y")
+
+# look at the structure of birthday2
+str(birthday2)
 
