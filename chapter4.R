@@ -176,3 +176,41 @@ data
 factor(x = data, 
        levels = c(1,2,3,4,5), 
        labels = c("rotten", "poor", "ok", "good", "excellent"))
+
+str(data)
+
+# There are five main object “classes” that hold different types of data:
+# 1. Vectors
+# 2. Matrices
+# 3. Arrays
+# 4. Lists
+# 5. Dataframes
+
+# A vector is a single row or column of data. This particular vector has three elements within it, and it stores data that have a mode of character. As we’ve already seen, vectors store only one datatype – they cannot store values with different datatypes.
+
+# Two columns of data can be thought of as a matrix object. Matrices can store only a single datatype (usually numbers). If we could make this matrix have many dimensions (like a cube of numbers), it would be called an array. Arrays can have multiple dimensions, but like matrices, can store only a single datatype. 
+
+# In R, objects can be combined into a list. For example, we can combine mixed (a vector), mixed2 (a vector), and my.matrix (a matrix) into a new type object, a list. Lists are a very important concept in R. They are collections of objects, sort of like a shoe store – it can hold shoeboxes of all sorts, even other shoe stores! Many functions (like statistical functions) return the results in lists, where each portion of the list holds different kinds of information.
+
+# Finally, all data together can be thought of as a dataframe, which is a special type of list that is composed of many different vectors, all of the same length. In this example, our dataframe consists of the three vectors, mixed, mixed2, and numbers.
+
+# VECTORS
+# use the c function to combine the two vectors, fiveIntegers and fiveRandoms into a new object called my.vector
+my.vector <- c(fiveIntegers,fiveRandoms)
+
+# look at the object 
+my.vector
+
+# We can use the length function to find out how many “elements” our vector has:
+  
+length(my.vector)
+
+# To get the first element stored in my.vector, use my.vector[1]
+# To get the third element stored in my.vector, use my.vector[3]
+# To get the first three elements stored in my.vector, use my.vector[1:3]
+# To get elements 3, 5, 7, and 8, use my.vector[c(3,5,7,8)]
+# To return everything but elements 1, 3, 7, and 8, use my.vector[-c(1,3,7,8)]
+# To get all of the elements, except the fifth element, use my.vector[-5]
+# To get the last three elements only, use my.vector[-(1:7)]
+
+# up to 4.5
