@@ -247,3 +247,53 @@ str(my.matrix)
 
 # You can never go wrong by using the trusty str function; it will provide the dimensions. Just don’t get thrown off when you see that the values in your matrix are different from ours. Recall that they were generated randomly with the runif function!
 
+# from the matrix function helpfile:  create a new object that is a matrix with the name mdat
+mdat <- matrix(c(1,2,3, 11,12,13), 
+               nrow = 2, 
+               ncol = 3, 
+               byrow = TRUE,
+               dimnames = list(c("row1", "row2"), 
+                               c("C.1", "C.2", "C.3")))
+
+# same code but with rows and columns argument names included
+mdat <- matrix(data = c(1,2,3, 11,12,13), 
+               nrow = 2, 
+               ncol = 3, 
+               byrow = TRUE,
+               dimnames = list(rows = c("row1", "row2"), 
+                               columns = c("C.1", "C.2", "C.3")))
+# show the matrix
+mdat
+# look at the output of str. Gives the RC names
+str(mdat)
+
+mdat <- matrix(dimnames = list(rows = c("Height", "Weight"), 
+                columns = c("Winken", "Blinken", "Nod")))
+# THis does not work
+
+colnames(mdat) = c("Winken", "Blinken", "Nod")
+rownames(mdat)= c("Height", "Weight")
+
+
+# create an object called tauntauns that is an array
+tauntauns  <- array(data = 0, 
+                    dim = c(5,11,2), 
+                    dimnames = list(year = 1:5, age = 0:10 , sex = c("male", "female")))
+# look at the object called tauntauns
+tauntauns
+# not listed as data, but as array (vector)
+
+# replace the 0's with random numbers between 100 and 500
+individuals  <-  sample(x = c(100:500), size = 110)
+
+# look at the individuals
+individuals
+
+# replace the array 0's with random numbers
+tauntauns[,,]  <- individuals
+
+# look at the object called tauntauns
+tauntauns
+
+# look at the structure of tauntauns
+str(tauntauns)
