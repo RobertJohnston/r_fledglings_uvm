@@ -318,13 +318,27 @@ my.data
 # look at the structure of my.data
 str(my.data)
 
-
 # convert my.matrix to a dataframe 
 my.matrix  <- as.data.frame(my.matrix)
 
 # look at the structure of my.matrix
 str(my.matrix)
 
-
+# That was a whirlwind tour of objects in R. We’ve talked about various datatypes, including numeric, integer, character, logical, factor, and date modes. We’ve also reviewed five main object “classes” that hold different kinds of data:
+   
+# Vectors - one dimensional series of elements that are all of the same mode.
+# Matrices - two dimensional series of elements that are all of the same mode.
+# Arrays - multi-dimensional series of elements that are all of the same mode.
+# Lists - groups or bundles of different objects.
+# Dataframes - a special kind of list which is composed of a series of vectors, each of the same length.
+ 
+# There are a few other kinds of objects as well, but these are the main classes that we’ll work with in this primer. It can be overwhelming to remember the different datatypes, the different object types, and the different functions that can be used for each. But you’ll make rapid progress if you keep these points in mind:
+   
+#   When you create an object, always look in your Environment and see what is there.
+# If you need to remember ONLY one function when it comes to objects, keep str in your back pocket. It returns the datatype, the object type, and lists all of the object’s attributes.
+# For functions, the help function can never be overused.
+# Objects have attributes, and the attr and attributes functions can be extremely helpful.
+ 
+# It may also be useful to peak at some of the following cheatsheets, and post those of interest by your computer:
 
 
