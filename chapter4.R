@@ -279,6 +279,12 @@ rownames(mdat)= c("Height", "Weight")
 tauntauns  <- array(data = 0, 
                     dim = c(5,11,2), 
                     dimnames = list(year = 1:5, age = 0:10 , sex = c("male", "female")))
+
+# what is the dim = c(5,11,2), ???
+# 5 rows, 11 cols and 2 matrices.
+# dimnames row names, col names and matrix names. 
+
+
 # look at the object called tauntauns
 tauntauns
 # not listed as data, but as array (vector)
@@ -297,3 +303,28 @@ tauntauns
 
 # look at the structure of tauntauns
 str(tauntauns)
+
+
+# 4.9 Data frames
+
+# a data frame is a list of vectors that all have the same length. Most datasets are stored as data frames in R, and we’ll get a lot of practice using them in the following chapters. For now, though, let’s combine the three vectors, fiveIntegers, fiveBooleans, and fiveRandoms into a data frame with the data.frame function. Let’s take a look at the help file:
+
+# create a dataframe called my.data
+my.data <- data.frame(fiveIntegers, fiveBooleans, fiveRandoms)
+
+#  look at the data
+my.data
+
+# look at the structure of my.data
+str(my.data)
+
+
+# convert my.matrix to a dataframe 
+my.matrix  <- as.data.frame(my.matrix)
+
+# look at the structure of my.matrix
+str(my.matrix)
+
+
+
+
