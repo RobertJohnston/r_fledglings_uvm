@@ -213,4 +213,37 @@ length(my.vector)
 # To get all of the elements, except the fifth element, use my.vector[-5]
 # To get the last three elements only, use my.vector[-(1:7)]
 
-# up to 4.5
+# up to 4.5 Vectors
+
+# create a new object called shoebox
+shoebox <- c(brand = "Nike", size = 10, model = "Pegasus")
+# look at the object called shoebox
+shoebox
+
+# create a vector 6 random numbers
+numbers <- runif(6)
+# look at the numbers
+numbers 
+
+# create an object called my.matrix that is a matrix object
+my.matrix <- matrix(data = numbers, nrow = 3, ncol = 2)
+# look at the object, my.matrix
+my.matrix
+
+# get the number of rows for the object called my.matrix
+nrow(my.matrix)
+# get the number of columns for the object called my.matrix
+ncol(my.matrix)
+
+dim(my.matrix)
+
+length(my.matrix)
+# Here’s another surprise, but this one is important. At its core, a matrix is a vector (with dimension attributes). The function length pertains to vectors, and since matrices are vectors with dimensional attributes, length returns the count of elements in the matrix. Think of a matrix as a vector that “snakes” around the rows and columns in a specified direction. For example, you can ask R to return all of the elements in the matrix using vector notation as follows:
+
+# Don't get confused between vectors and matrices.
+
+str(my.matrix)
+# output index of Rows, Index of Columns, and then vector.
+
+# You can never go wrong by using the trusty str function; it will provide the dimensions. Just don’t get thrown off when you see that the values in your matrix are different from ours. Recall that they were generated randomly with the runif function!
+
